@@ -28,14 +28,17 @@ public class TestZoo {
             sc.nextLine();
             switch (ch) {
                 case 1:
-                    System.out.println("Nhap ma so chuong: ");
-                    chuong.maChuong=sc.nextLine();
-                    zoo.themChuong(chuong);
+                    Chuong chuong1 = new Chuong(123);
+                    zoo.themChuong(chuong1);
+                    Chuong chuong2 = new Chuong(456);
+                    zoo.themChuong(chuong2);
+                    Chuong chuong3 = new Chuong(789);
+                    zoo.themChuong(chuong3);
                     break;
                 case 2:
 
                     System.out.println("Nhap ma so chuong muon xoa: ");
-                    String ma=sc.nextLine();
+                    int ma=sc.nextInt();
                     zoo.xoaChuong(ma);
                     break;
                 case 3:
