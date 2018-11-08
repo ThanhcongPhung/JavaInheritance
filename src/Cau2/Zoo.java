@@ -10,19 +10,18 @@ public class Zoo {
         System.out.println("Them thanh cong");
     }
 
-    public void xoaChuong(String machuong) {
+    public void xoaChuong(int machuong) {
         boolean search = false;
         for (Chuong chuong : DanhSachChuong) {
-            if (chuong.maChuong.equals(machuong)) {
+            if (chuong.maChuong==(machuong)) {
                 DanhSachChuong.remove(chuong);
+                System.out.printf("Da xoa chuong co ma %d\n", machuong);
                 search = true;
-                System.out.printf("Da xoa chuong co ma %s\n", machuong);
                 break;
-            }
-          
+            }   
         }
         if (search == false) {
-            System.out.println("Khong tim thay chuong");
+            System.out.println("Khong tim thay chuong %d",machuong);
         }
         System.out.println("So luong chuong con lai: "+DanhSachChuong.size());
     }
