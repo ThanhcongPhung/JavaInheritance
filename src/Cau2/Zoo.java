@@ -14,11 +14,12 @@ public class Zoo {
         boolean search = false;
         for (Chuong chuong : DanhSachChuong) {
             if (chuong.maChuong.equals(machuong)) {
-                DanhSachChuong.remove(machuong);
+                DanhSachChuong.remove(chuong);
                 search = true;
                 System.out.printf("Da xoa chuong co ma %s\n", machuong);
+                break;
             }
-            break;
+          
         }
         if (search == false) {
             System.out.println("Khong tim thay chuong");
